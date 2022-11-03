@@ -1,0 +1,23 @@
+{
+  "name": "discord-sample-bot",
+  "version": "1.0.0",
+  "description": "Discord sample bot with discords.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucianoacsilva/discord-sample-bot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "Luciano Augusto Campagnoli da Silva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucianoacsilva/discord-sample-bot/issues"
+  },
+  "homepage": "https://github.com/lucianoacsilva/discord-sample-bot#readme"
+}
