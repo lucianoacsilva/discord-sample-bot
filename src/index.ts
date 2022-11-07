@@ -1,24 +1,17 @@
-console.log('Try npm run lint/fix!');
+import { Client, Partials } from "discord.js";
+import { config } from "dotenv";
 
-const longString =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut aliquet diam.';
+config();
 
-const trailing = 'Semicolon';
+const { BOT_TOKEN } = process.env;
 
-const why = 'am I tabbed?';
+const client: Client = new Client({ 
+  intents: ["Guilds", "GuildMessages", "DirectMessages"] , 
+  partials: [Partials.Channel, Partials.GuildMember, Partials.Message, Partials.Reaction, Partials.User] 
+});
 
-export function doSomeStuff(
-  withThis: string,
-  andThat: string,
-  andThose: string[]
-) {
-  //function on one line
-  if (!andThose.length) {
-    return false;
-  }
-  console.log(withThis);
-  console.log(andThat);
-  console.dir(andThose);
-  return;
-}
-// TODO: more examples
+client.on("ready", (client) => {
+  console.log("Bot online! " + client.user.tag);
+});
+
+client.login(BOT_TOKEN);
